@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para ti, {{ nombre }}</title>
+  <style>
+    body {
+      background: linear-gradient(120deg, #ffe0ec, #fff7f7);
+      color: #3e3e3e;
+      font-family: 'Georgia', serif;
+      padding: 40px;
+      text-align: center;
+    }
+    .carta {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: #e91e63;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+    .firma {
+      margin-top: 30px;
+      font-style: italic;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="carta">
+    <h1>Para ti, {{ nombre }}</h1>
+    <p>
+      A veces las palabras no alcanzan,<br>
+      pero aún así quiero decirte algo sencillo: <br><br>
+
+      Eres una persona increíble, y cada día que te conozco<br>
+      me doy cuenta de lo especial que eres. 🌹<br><br>
+
+      Esta página es solo un pequeño detalle para hacerte sonreír.<br>
+    <br>
+      y tal vez, crear algo bonito contigo. 💌
+    </p>
+
+    <p class="firma">
+      Con cariño,<br>
+      {{ autor }}
+    </p>
+  </div>
+</body>
+</html>
