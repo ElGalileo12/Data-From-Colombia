@@ -15,6 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+from django.contrib.auth.views import LoginView
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
@@ -27,4 +28,5 @@ urlpatterns = [
     path("__reload__/", include("django_browser_reload.urls")),
     path("usuarios/", include("users.urls")),
     path("pedidos/", include("orders.urls")),
+    path("login/", LoginView.as_view(template_name="users/login.html"), name="login"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
